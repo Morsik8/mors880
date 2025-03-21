@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1e73e8;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(2, 2, 42);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.593);
+}
+
+h1, h2 {
+    color: #fffdfdf1;
+}
+
+.name {
+    background-color: #2c41fb;
+    margin: 10px 0;
+    padding: 15px;
+}
+
+.backName {
+    background-color: #515151;
+    
+    color: white;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #979797;
+}
+
+.back {
+    background-color: #000000;
+    
+    color: white;
+    margin: 5px 0;
+    padding: 10px;
+    border-left: 2px solid #515151;
+}
+
+.processName {
+    background-color: #0a0090d8;
+    color: rgb(136, 138, 255);
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #735af4;
+}
+
+.process {
+    background-color: #000000d8;
+    color: rgb(254, 254, 254);
+    margin: 5px 0;
+    padding: 10px;
+    border-left: 2px solid #0a0090d8;
+}
+
+.readyName {
+    background-color: #008705d8;
+    color: rgb(136, 255, 140);
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #5af45a;
+}
+
+.ready {
+    background-color: #000000d8;
+    color: rgb(255, 255, 255);
+    margin: 5px 0;
+    padding: 10px;
+    border-left: 2px solid #008705d8;
+}
+
+.basketName {
+    background-color: #870000d8;
+    color: rgb(255, 136, 136);
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #f45a64;
+}
+
+.basket {
+    background-color: #080404d8;
+    color: rgb(255, 255, 255);
+    margin: 5px 0;
+    padding: 10px;
+    border-left: 2px solid #870000d8;
+}
+
+
+.task-section2 {
+    background: rgb(29, 0, 122);
+    margin:5px 0;
+    padding: 10px;
+    display: inline-block;
+}
+
+.task-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.task-section {
+    flex: 1;
+    min-width: 200px;
+    
+    margin: 5px;
+    padding: 10px;
+    
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+input[type="text"] {
+    padding: 10px;
+    width: calc(80% - 120px);
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgba(27, 10, 184, 0.797);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #261ff6;
+}
+
+.clear-button {
+    padding: 10px 20px;
+    background-color: rgb(184, 10, 10);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.clear-button:hover {
+    background-color: #f61f1f;
+}
