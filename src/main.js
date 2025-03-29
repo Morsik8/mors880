@@ -14,10 +14,10 @@ render(new FormAddTaskComponent(), formContainer);
 render(new TaskBoardComponent(), taskBoardContainer);
 
 const taskLists = [
-  'Бэклог',
-  'В процессе',
-  'Готово',
-  'Корзина'
+  'Название блока',
+  'Название блока',
+  'Название блока',
+  'Название блока'
 ];
 
 const tasks = [

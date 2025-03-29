@@ -3,7 +3,7 @@ import { createElement } from '../framework/render.js';
 
 function createTaskTemplate(taskText) {
   return `
-        <li class="task">${taskText}</li>
+        <li class="task">Название задачи</li>
     `;
 }
 
