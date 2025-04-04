@@ -1,10 +1,11 @@
+import { Status } from '../const.js';
 import { createElement } from '../framework/render.js';
 
 
-function createTaskListTemplate(title) {
+function createTaskListTemplate(status, title) {
   return `
       <div class="task-section">
-          <h3>${title}</h3>
+          <h3 class="${status}title">${title}</h3>
           <ul class="task-list"></ul>
       </div>
   `;
@@ -12,12 +13,13 @@ function createTaskListTemplate(title) {
 
 
 export default class TaskListComponent {
-  constructor(title) {
+  constructor(status, title) {
     this.title = title;
+    this.status = status;
   }
 
   getTemplate() {
-    return createTaskListTemplate(this.title);
+    return createTaskListTemplate(this.status, this.title);
   }
 
 

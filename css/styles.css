@@ -29,8 +29,34 @@ h2 {
 }
 
 
-h3 {
+
+
+.backlogtitle {
   background-color: #acabab;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #000000ba;
+  border-radius: .9rem;
+}
+
+.processtitle {
+  background-color: #3a51fcd8;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #000000ba;
+  border-radius: .9rem;
+}
+
+.donetitle {
+  background-color: #4afc3ad8;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #000000ba;
+  border-radius: .9rem;
+}
+
+.trashtitle {
+  background-color: #fc3a3ad8;
   margin: 5px 0;
   padding: 10px;
   border: 1px solid #000000ba;
@@ -46,7 +72,37 @@ h3 {
   border-left: 2px solid #000000ba;
 }
 
+.backlogli {
+  background-color: #dbdbdb;
+  
+  margin: 5px 0;
+  padding: 10px;
+  border-left: 2px solid #000000ba;
+}
 
+.processli {
+  background-color: #dbdbdb;
+  
+  margin: 5px 0;
+  padding: 10px;
+  border-left: 2px solid #0016d9;
+}
+
+.doneli {
+  background-color: #dbdbdb;
+  
+  margin: 5px 0;
+  padding: 10px;
+  border-left: 2px solid #00d928;
+}
+
+.trashli {
+  background-color: #dbdbdb;
+  
+  margin: 5px 0;
+  padding: 10px;
+  border-left: 2px solid #d90000;
+}
 
 .add-section {
   background: rgb(116, 124, 247);
