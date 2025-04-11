@@ -1,19 +1,5 @@
 export const tasks =[
-    {
-        id: "1",
-        title: "Сходить в магазин",
-        status: "backlog",
-    },
-    {
-        id: "2",
-        title: "Пойти погулять",
-        status: "backlog",
-    },
-    {
-        id: "3",
-        title: "Устроиться на работу",
-        status: "backlog",
-    },
+    
     {
         id: "4",
         title: "Выучить JS",
@@ -27,7 +13,7 @@ export const tasks =[
     {
         id: "6",
         title: "Выпить смузи",
-        status: "process",
+        status: "trash",
     },
     {
         id: "7",
@@ -48,8 +34,14 @@ export const tasks =[
         id: "10",
         title: "Сделать ДЗ",
         status: "trash",
-    },{
+    },
+    {
         id: "11",
+        title: "Cъесть мороженое",
+        status: "process",
+    },
+    {
+        id: "12",
         title: "Прочитать войну и мир",
         status: "trash",
     }

@@ -28,8 +28,23 @@ h2 {
   color: #fffdfdf1;
 }
 
+.empty-text {
+  background-color: rgba(219, 219, 219, 0.3); 
+  margin: 5px 0;
+  padding: 10px;
+  color: rgba(0, 0, 0, 0.5); 
+  border: 2px dashed rgba(0, 0, 0, 0.4); 
+}
 
 
+
+.title {
+  background-color: #acabab;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #000000ba;
+  border-radius: .9rem;
+}
 
 .backlogtitle {
   background-color: #acabab;
@@ -121,7 +136,7 @@ h2 {
 
 .task-section {
   flex: 1;
-  min-width: 200px;
+  min-width: 300px;
 
   margin: 5px;
   padding: 10px;
@@ -160,6 +175,7 @@ button:hover {
 
 .clear-button:hover {
   background-color: #f61f1f;
+
 }
 
 .taskboard {

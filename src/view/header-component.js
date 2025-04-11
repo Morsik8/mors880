@@ -1,35 +1,13 @@
-import { createElement } from '../framework/render.js';
+import { AbstractComponent } from '../framework/abstract-component.js';
 
-
-function createHeaderComponentTemplate() {
-  return (
-    ` <header class="board-app__header">
-          <div class="board-app__inner">
-            <h1>Список задач</h1>
-          </div>
-        </header>
-    `
-  );
-}
-
-
-export default class HeaderComponent {
-  getTemplate() {
-    return createHeaderComponentTemplate();
-  }
-
-
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
-    }
-
-
-    return this.element;
-  }
-
-
-  removeElement() {
-    this.element = null;
+export default class HeaderComponent extends AbstractComponent {
+  get template() {
+    return `
+      <header class="board-app__header">
+        <div class="board-app__inner">
+          <h1>Список задач</h1>
+        </div>
+      </header>
+    `;
   }
 }
