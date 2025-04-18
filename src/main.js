@@ -9,11 +9,19 @@ const formContainer = document.querySelector('.add-task');
 const taskBoardContainer = document.querySelector('.taskboard');
 
 const tasksModel = new TasksModel();
+
 const tasksBoardPresenter = new TasksBoardPresenter({
   boardContainer: taskBoardContainer,
   tasksModel,
 });
 
+// Компонент формы + логика "добавить"
+const formAddTaskComponent = new FormAddTaskComponent({
+  onclick: (taskTitle) => {
+    tasksBoardPresenter.createTask(taskTitle);
+  }
+});
+
+render(formAddTaskComponent, formContainer);
 render(new HeaderComponent(), bodyContainer, RenderPosition.BEFOREBEGIN);
-render(new FormAddTaskComponent(), formContainer);
 tasksBoardPresenter.init();
