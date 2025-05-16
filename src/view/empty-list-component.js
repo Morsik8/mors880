@@ -1,4 +1,3 @@
-// src/view/empty-list-component.js
 import { AbstractComponent } from '../framework/abstract-component.js';
 
 function createEmptyListTemplate(status, title) {
@@ -18,6 +17,8 @@ export default class EmptyListComponent extends AbstractComponent {
   }
 
   get template() {
-    return createEmptyListTemplate(this.status, this.title);
+    return `<li class="empty-text">Список "${this.title}" пуст</li>`;
   }
 }
+
+

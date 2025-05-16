@@ -11,7 +11,6 @@ export default class TasksBoardPresenter {
   #boardContainer = null;
   #tasksModel = null;
   #tasksBoardComponent = new TaskBoardComponent();
-  #taskLists = {};
 
   constructor({ boardContainer, tasksModel }) {
     this.#boardContainer = boardContainer;
@@ -41,19 +40,26 @@ export default class TasksBoardPresenter {
     Object.values(Status).forEach((status) => {
       const statusTasks = this.#tasksModel.getTasksByStatus(status);
 
-      if (statusTasks.length === 0) {
-        this.#renderEmptyList(status);
-        return;
-      }
+      const tasksListComponent = new TasksListComponent(
+        status,
+        StatusLabel[status],
+        this.#handleTaskDrop.bind(this)
+      );
 
-      const tasksListComponent = new TasksListComponent(status, StatusLabel[status]);
-      this.#taskLists[status] = tasksListComponent;
       render(tasksListComponent, this.#tasksBoardComponent.element);
 
-      statusTasks.forEach((task) => this.#renderTask(task, tasksListComponent));
+      const listElement = tasksListComponent.element.querySelector('.task-list');
 
-      if (status === Status.TRASH) {
-        this.#renderClearButton(tasksListComponent);
+      if (statusTasks.length === 0) {
+        this.#renderEmptyList(status, tasksListComponent);
+      } else {
+        statusTasks.forEach((task) => {
+          this.#renderTask(task, tasksListComponent);
+        });
+
+        if (status === Status.TRASH) {
+          this.#renderClearButton(tasksListComponent);
+        }
       }
     });
   }
@@ -73,8 +79,13 @@ export default class TasksBoardPresenter {
     render(clearButtonComponent, listElement, RenderPosition.AFTEREND);
   }
 
-  #renderEmptyList(status) {
+  #renderEmptyList(status, listComponent) {
     const emptyListComponent = new EmptyListComponent(status, StatusLabel[status]);
-    render(emptyListComponent, this.#tasksBoardComponent.element);
+    const listElement = listComponent.element.querySelector('.task-list');
+    render(emptyListComponent, listElement);
+  }
+
+  #handleTaskDrop(taskId, newStatus) {
+    this.#tasksModel.updateTaskStatus(taskId, newStatus);
   }
 }
